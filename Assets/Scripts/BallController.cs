@@ -3,6 +3,7 @@ using UnityEngine;
 public class BallController : MonoBehaviour
 {
     [SerializeField] private float force = 1f;
+    [SerializeField] private Transform ballAnchor;
     [SerializeField] private InputManager inputManager;
     private Rigidbody ballRB;
     private bool isBallLaunched;
@@ -15,6 +16,11 @@ public class BallController : MonoBehaviour
         // Add listener to OnSpacePressed event
         // When space key pressed, the LaunchBall method will be called
         inputManager.OnSpacePressed.AddListener(LaunchBall);
+
+        transform.parent = ballAnchor;
+        transform.localPosition = Vector3.zero;
+
+        ballRB.isKinematic = true;
     }
 
     private void LaunchBall()
@@ -24,6 +30,11 @@ public class BallController : MonoBehaviour
 
         // if ball not launched, set to true and launch it
         isBallLaunched = true;
+
+        // set this obj to the outmost layer of the hierarchy
+        transform.parent = null;
+
+        ballRB.isKinematic = false;
 
         // 1st arg: force direction, 2nd arg: force application method
         // impulse = instant force change
