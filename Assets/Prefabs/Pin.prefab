@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5400651232114311359}
   - component: {fileID: 4357391540993538900}
+  - component: {fileID: 5832001589393180298}
   m_Layer: 0
   m_Name: FallTrigger
   m_TagString: Untagged
@@ -53,6 +54,22 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1.5779791, z: 1}
   m_Center: {x: 0, y: 0.28898954, z: 0}
+--- !u!114 &5832001589393180298
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2493806173346944453}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bbaf1fa2bf8c684183659bd9b6cbd93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnPinFall:
+    m_PersistentCalls:
+      m_Calls: []
+  isPinFallen: 0
 --- !u!1 &4998704234316548767
 GameObject:
   m_ObjectHideFlags: 0
