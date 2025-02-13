@@ -1677,7 +1677,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f9d456afd35ad4428a8242024e83009, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  force: 4
+  force: 10
   ballAnchor: {fileID: 668570614}
   launchIndicator: {fileID: 832341884}
   inputManager: {fileID: 836392111}
